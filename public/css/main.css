@@ -1,0 +1,17 @@
+.masked-fa {
+  position: relative;
+  max-width: 800px;
+  aspect-ratio: 800/450;
+}
+
+.masked {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-mask-image: url("/assets/star.svg");
+  mask-image: url("/assets/star.svg");
+  background: url("https://storage.googleapis.com/academy-doctorbook-jp/packs/media/images/front/top/dplus_20240613-c9f97f16a0cb2f6a9e6ba720668d35dd.jpeg");
+  background-size: cover;
+  background-position: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
