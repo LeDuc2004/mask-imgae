@@ -1,16 +1,138 @@
-.masked-fa {
-  position: relative;
-  max-width: 800px;
-  aspect-ratio: 800 / 450;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Odibee+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
 }
-.masked {
-  position: absolute;
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+section {
   width: 100%;
-  height: 100%;
-  -webkit-mask-image: url("/assets/star.svg");
-  mask-image: url("/assets/star.svg");
-  background: url("https://storage.googleapis.com/academy-doctorbook-jp/packs/media/images/front/top/dplus_20240613-c9f97f16a0cb2f6a9e6ba720668d35dd.jpeg");
+  height: 100vh;
+  height: 100dvh;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+
+.header {
+  width: auto;
+  height: 100vh;
+  position: relative;
+  padding-top: 20px;
+  background: linear-gradient(180deg, #eaf3f7 0%, rgba(242, 249, 255, 0) 80%);
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    color: #fff;
+    font-size: 4vw;
+  }
+}
+
+.scroller {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  .scroller_inner {
+    padding-block: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+  img {
+    width: 350px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+}
+
+.scroller[data-animated="true"] {
+}
+.scroller[data-animated="true"] .scroller_inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll 100s linear infinite;
+}
+
+.scroller.revert img:first-child {
+  margin-left: -200px;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+.top_hero {
+  position: relative;
+  width: 80vw;
+  overflow: hidden;
+  height: 215px;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  button {
+    display: none !important;
+  }
+}
+
+.overView_video {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/assets/bg_video.png");
   background-size: cover;
-  background-position: center;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+  }
+  iframe {
+    width: 50%;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+.list_section {
+  position: fixed;
+  bottom: 10%;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  a {
+    width: 30px;
+    aspect-ratio: 1;
+    text-decoration: none;
+    color: white;
+    border-radius: 50%;
+    background-color: orange;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

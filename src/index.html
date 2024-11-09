@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>JW Player Example</title>
     <link rel="stylesheet" href="./css/main.css" />
     <link
       rel="stylesheet"
@@ -15,13 +15,74 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-default.min.css"
     />
   </head>
-  <script src="https://player.vimeo.com/api/player.js"></script>
   <body>
-    <div class="masked-fa">
-      <div class="masked"></div>
-    </div>
-  </body>
+    <section id="step1" class="header">
+      <div style="position: relative">
+        <h1>Welcome to Đà Nẵng</h1>
+        <div class="top_hero">
+          <img src="/assets/lake.jpg" alt="" />
+          <img src="/assets/pexels.jpg" alt="" />
+          <img src="/assets/net.png" alt="" />
+        </div>
+      </div>
+      <ul class="scroller" data-animated="true">
+        <div class="scroller_inner">
+          <img src="/assets/hero_top/image copy 2.png" alt="" />
+          <img src="/assets/hero_top/image copy 3.png" alt="" />
+          <img src="/assets/hero_top/image copy 4.png" alt="" />
+          <img src="/assets/hero_top/image copy 5.png" alt="" />
+          <img src="/assets/hero_top/image copy 6.png" alt="" />
+          <img src="/assets/hero_top/image copy 7.png" alt="" />
+          <img src="/assets/hero_top/image copy 8.png" alt="" />
+          <img src="/assets/hero_top/image copy 14.png" alt="" />
+          <img src="/assets/hero_top/image copy 9.png" alt="" />
+          <img src="/assets/hero_top/image copy 10.png" alt="" />
+          <img src="/assets/hero_top/image copy 11.png" alt="" />
+          <img src="/assets/hero_top/image copy 12.png" alt="" />
+          <img src="/assets/hero_top/image copy 13.png" alt="" />
+        </div>
+      </ul>
 
+      <ul class="scroller revert" data-animated="true">
+        <div class="scroller_inner">
+          <img src="/assets/hero_top/image copy 15.png" alt="" />
+          <img src="/assets/hero_top/image copy 16.png" alt="" />
+          <img src="/assets/hero_top/image copy 17.png" alt="" />
+          <img src="/assets/hero_top/image copy 18.png" alt="" />
+          <img src="/assets/hero_top/image copy 19.png" alt="" />
+          <img src="/assets/hero_top/image copy 20.png" alt="" />
+          <img src="/assets/hero_top/image copy 21.png" alt="" />
+          <img src="/assets/hero_top/image copy 22.png" alt="" />
+          <img src="/assets/hero_top/image copy 23.png" alt="" />
+          <img src="/assets/hero_top/image copy 24.png" alt="" />
+          <img src="/assets/hero_top/image copy 25.png" alt="" />
+          <img src="/assets/hero_top/image copy.png" alt="" />
+          <img src="/assets/hero_top/image.png" alt="" />
+
+
+        </div>
+      </ul>
+    </section>
+
+    <section id="step2"></section>
+    <section id="step_last" class="overView_video">
+      <h1>Overview of Da Nang discovery tourism</h1>
+      <iframe
+        src="https://www.youtube.com/embed/nrbiVwvoFIQ"
+        title="DU LỊCH ĐÀ NẴNG HỘI AN 5 NGÀY TỰ TÚC | Kinh nghiệm khám phá những Địa Điểm Đẹp Nhất và Món Ăn Ngon"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </section>
+
+    <ul class="list_section">
+      <a href="#step1">1</a>
+      <a href="#step2">2</a>
+      <a href="#step_last">last</a>
+    </ul>
+  </body>
   <script
     src="https://code.jquery.com/jquery-3.7.1.js"
     integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
@@ -34,6 +95,12 @@
   <script
     type="text/javascript"
     src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"
+    integrity="sha512-An4a3FEMyR5BbO9CRQQqgsBscxjM7uNNmccUSESNVtWn53EWx5B9oO7RVnPvPG6EcYcYPp0Gv3i/QQ4KUzB5WA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
   ></script>
   <script src="./main.js"></script>
 </html>
